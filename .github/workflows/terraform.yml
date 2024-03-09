@@ -1,4 +1,4 @@
-name: Deploy Lambda and API Gateway
+name: Deploy Lambda, API Gateway and Cognito
 
 on:
   push:
