@@ -1,7 +1,7 @@
 # TechChallenge-Grupo13-Lambda
 Este repositório é dedicado ao LAMBDA, API Gateway e Cognito, com a finalidade de incorporar aprimoramentos baseados nas melhores práticas de CI/CD para a API.
 
-Realizamos a criação de todos os recursos com terraform.
+O deploy de todos os recursos é realizado pelo Github Actions a partir dos arquivos Terraform.
 
 ![image](https://github.com/eraldoads/TechChallenge-Grupo13-Lambda/assets/47857203/87dec5c6-b7da-4b8d-ad16-cde65e6ccd1c)
 
