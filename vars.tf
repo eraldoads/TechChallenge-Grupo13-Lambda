@@ -50,3 +50,12 @@ variable "tags" {
     App = "piklesfastfood"
   }
 }
+
+variable username_cognito {
+  type        = string
+}
+
+variable password_cognito {
+  type        = string
+}
+

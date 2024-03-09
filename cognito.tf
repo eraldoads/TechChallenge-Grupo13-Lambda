@@ -29,8 +29,10 @@ resource "aws_cognito_user_pool_domain" "domain" {
 }
 
 resource "aws_cognito_user" "pikles" {
-  username       = "pikles"
+  #username       = "pikles"
+  username       = var.username_cognito
   user_pool_id   = aws_cognito_user_pool.pool.id
   message_action = "SUPPRESS"      # Evita a necessidade de confirmação por e-mail
-  password       = "Fastfood@2024" # Senha pré-definida para o usuário
+  #password       = "Fastfood@2024" # Senha pré-definida para o usuário
+  password       = var.password_cognito
 }
