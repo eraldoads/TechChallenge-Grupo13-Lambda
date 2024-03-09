@@ -16,3 +16,9 @@ data "archive_file" "lambda" {
   source_file = "index.js"
   output_path = "index.zip"
 }
+
+data "aws_region" "current" {}
+
+data "aws_caller_identity" "current" {}
+
+data "aws_lb" "alb" {}

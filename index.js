@@ -9,7 +9,7 @@ exports.handler = async (event) => {
   const data = JSON.stringify({ cpf });
 
   const options = {
-    hostname: 'alb-ecr-piklesfastfood-777875913.us-east-1.elb.amazonaws.com',
+    hostname: process.env.URL_BACKEND,
     path: '/login',
     method: 'POST',
     headers: {
@@ -18,7 +18,7 @@ exports.handler = async (event) => {
   };
 
   return new Promise((resolve, reject) => {
-    const req = http.request(options, (res) => { // Usamos 'http.request' em vez de 'https.request'
+    const req = http.request(options, (res) => {
       let responseBody = '';
 
       res.on('data', (chunk) => {

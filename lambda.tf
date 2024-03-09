@@ -1,12 +1,18 @@
 resource "aws_lambda_function" "auth" {
   function_name = "auth"
-  filename = "index.zip"
-  runtime = "nodejs20.x"
-  handler = "index.handler"
+  filename      = "index.zip"
+  runtime       = "nodejs20.x"
+  handler       = "index.handler"
 
   source_code_hash = data.archive_file.lambda.output_base64sha256
 
   role = aws_iam_role.lambda_exec.arn
+
+  environment {
+    variables = {
+      URL_BACKEND = "${data.aws_lb.alb.dns_name}"      
+    }
+  }
 }
 
 resource "aws_cloudwatch_log_group" "auth" {

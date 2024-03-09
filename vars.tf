@@ -39,6 +39,11 @@ variable "AWSAccount" {
   default = "399256494712"
 }
 
+variable "lambda_name" {
+  type    = string
+  default = "auth"
+}
+
 variable "tags" {
   type = map(string)
   default = {
