@@ -3,6 +3,15 @@ Este repositório é dedicado ao LAMBDA, API Gateway e Cognito, com a finalidade
 
 O deploy de todos os recursos é realizado pelo Github Actions a partir dos arquivos Terraform.
 
+## 🖥️ Grupo 13 - Integrantes
+🧑🏻‍💻 *<b>RM352133</b>*: Eduardo de Jesus Coruja </br>
+🧑🏻‍💻 *<b>RM352316</b>*: Eraldo Antonio Rodrigues </br>
+🧑🏻‍💻 *<b>RM352032</b>*: Luís Felipe Amengual Tatsch </br>
+
+## ☑️ Estrutura
+
+Criamos uma função Lambda associada a um API Gateway:
+
 ![image](https://github.com/eraldoads/TechChallenge-Grupo13-Lambda/assets/47857203/87dec5c6-b7da-4b8d-ad16-cde65e6ccd1c)
 
 Ao receber um request, a função lambda realiza um POST no endpoint definido na variável de ambiente URL_BACKEND, a qual aponta para o Load Balancer. Este por sua vez, direciona as requisições para o container no ECS.
