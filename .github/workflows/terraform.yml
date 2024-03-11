@@ -3,7 +3,7 @@ name: Deploy Lambda, API Gateway and Cognito
 on:
   push:
     branches:
-      - develop
+      - main
 
 jobs:
   deploy:
