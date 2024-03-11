@@ -20,7 +20,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET }}
           aws-region: us-east-1
 
-      - name: Deploy Lambda function e API Gateway
-        run: |                    
+      - name: Deploy Lambda, API Gateway and Cognito
+        run: |    
+          export TF_VAR_username_cognito=${{ secrets.USERNAME_COGNITO }}   
+          export TF_VAR_password_cognito=${{ secrets.PASSWORD_COGNITO }}                
           terraform init
           terraform apply -auto-approve
